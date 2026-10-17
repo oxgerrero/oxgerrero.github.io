@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>David Gómez — Full-Stack Developer</title>
+  <meta name="description" content="David Leonardo Gómez Ochoa — Full-Stack Developer en Bogotá, Colombia. NestJS, React, Spring Boot, FastAPI, PostgreSQL, Docker y analítica de datos." />
+  <meta name="author" content="David Leonardo Gómez Ochoa" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="David Gómez — Full-Stack Developer" />
+  <meta property="og:description" content="Sistemas en producción con NestJS, React, Spring Boot, FastAPI y PostgreSQL. Ingeniero de Sistemas y Especialista en Ciencia y Analítica de Datos." />
+  <meta property="og:url" content="https://oxgerrero.github.io/" />
+  <meta property="og:image" content="https://oxgerrero.github.io/assets/avatar.png" />
+  <meta name="theme-color" content="#ff9a00" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff9a00'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='28' fill='%23111'%3EDG%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script>
+    // Aplica idioma y tema guardados antes de pintar, para evitar parpadeo
+    (function () {
+      try {
+        var lang = localStorage.getItem("lang");
+        if (!lang) lang = (navigator.language || "es").slice(0, 2) === "es" ? "es" : "en";
+        document.documentElement.lang = lang;
+        var theme = localStorage.getItem("theme");
+        if (theme) document.documentElement.dataset.theme = theme;
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+  <header class="nav">
+    <div class="nav__inner">
+      <a href="#top" class="nav__logo" aria-label="Inicio">DG<span>.</span></a>
+      <nav class="nav__links">
+        <a href="#sobre-mi"><span data-l="es">Sobre mí</span><span data-l="en">About</span></a>
+        <a href="#stack">Stack</a>
+        <a href="#experiencia"><span data-l="es">Experiencia</span><span data-l="en">Experience</span></a>
+        <a href="#proyectos"><span data-l="es">Proyectos</span><span data-l="en">Projects</span></a>
+        <a href="#contacto"><span data-l="es">Contacto</span><span data-l="en">Contact</span></a>
+      </nav>
+      <div class="nav__actions">
+        <button class="btn-icon" id="lang-toggle" type="button" aria-label="Cambiar idioma / Switch language">
+          <span data-l="es">EN</span><span data-l="en">ES</span>
+        </button>
+        <button class="btn-icon" id="theme-toggle" type="button" aria-label="Cambiar tema">
+          <svg viewBox="0 0 24 24" class="icon-sun" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 1.5v3M12 19.5v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M1.5 12h3M19.5 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg>
+          <svg viewBox="0 0 24 24" class="icon-moon" aria-hidden="true"><path d="M21 13.2A9 9 0 1 1 10.8 3a7 7 0 0 0 10.2 10.2z"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero container">
+      <img class="hero__avatar" src="assets/avatar.png" alt="Foto de David Gómez" width="160" height="160" />
+      <div class="hero__text">
+        <p class="hero__kicker mono">
+          <span class="dot"></span>
+          <span data-l="es">Disponible para nuevos proyectos</span><span data-l="en">Open to new opportunities</span>
+        </p>
+        <h1>David Leonardo Gómez Ochoa</h1>
+        <p class="hero__role">Full-Stack Developer <span class="muted">·</span> <span data-l="es">Datos &amp; Analítica</span><span data-l="en">Data &amp; Analytics</span></p>
+        <p class="hero__lead">
+          <span data-l="es">Construyo sistemas que la gente usa todos los días: puntos de venta en producción, automatización de procesos y APIs bien documentadas. Ingeniero de Sistemas y Especialista en Ciencia y Analítica de Datos, con más de 4 años de experiencia.</span>
+          <span data-l="en">I build software people rely on every day: production point-of-sale systems, process automation and well-documented APIs. Systems Engineer with a specialization in Data Science &amp; Analytics and 4+ years of experience.</span>
+        </p>
+        <div class="hero__cta">
+          <a class="btn btn--primary" href="mailto:bojacasa@gmail.com">
+            <span data-l="es">Escríbeme</span><span data-l="en">Get in touch</span>
+          </a>
+          <a class="btn" href="https://github.com/oxgerrero" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn" href="https://www.linkedin.com/in/david-gomez-229541155/" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+        <p class="hero__meta mono">📍 Bogotá, Colombia</p>
+      </div>
+    </section>
+
+    <!-- NÚMEROS -->
+    <section class="container">
+      <ul class="stats">
+        <li><strong>4+</strong><span data-l="es">años como desarrollador</span><span data-l="en">years as a developer</span></li>
+        <li><strong>2</strong><span data-l="es">sistemas POS en tiendas reales</span><span data-l="en">POS systems in real stores</span></li>
+        <li><strong>10+</strong><span data-l="es">pruebas técnicas full-stack resueltas</span><span data-l="en">full-stack technical challenges</span></li>
+        <li><strong>5</strong><span data-l="es">lenguajes en producción</span><span data-l="en">languages in production</span></li>
+      </ul>
+    </section>
+
+    <!-- SOBRE MÍ -->
+    <section id="sobre-mi" class="section container">
+      <h2 class="section__title"><span class="mono accent">01.</span> <span data-l="es">Sobre mí</span><span data-l="en">About me</span></h2>
+      <div class="about">
+        <div data-l="es">
+          <p>Soy <strong>Desarrollador Sénior en Software Colombia</strong>, donde trabajo en desarrollo full-stack. Antes estuve en <strong>Pollo Olímpico</strong>, resolviendo incidentes en producción en una empresa de alimentos donde el software sostiene la operación, y tres años en <strong>NITOLO</strong> construyendo software a la medida.</p>
+          <p>En paralelo desarrollo productos propios para comercios: sistemas <strong>POS on-premise</strong> con multi-tienda, RBAC, facturación, PWA para celulares y despliegue con Docker, que hoy operan en tiendas reales. También desarrollo automatizaciones a la medida en Python.</p>
+          <p>Me gusta el trabajo de punta a punta: entender la regla de negocio, modelar la base de datos, escribir la API, la interfaz y dejar el despliegue y la documentación listos para que otro pueda operarlo.</p>
+        </div>
+        <div data-l="en">
+          <p>I'm a <strong>Senior Developer at Software Colombia</strong>, working across the full stack. Before that I was at <strong>Pollo Olímpico</strong>, handling production incidents at a food company where software keeps operations running, and spent three years at <strong>NITOLO</strong> building custom software.</p>
+          <p>On the side I build products for retail businesses: <strong>on-premise POS systems</strong> with multi-store support, RBAC, invoicing, a mobile PWA and Docker-based deployment, now running in real stores. I also build custom Python automation.</p>
+          <p>I enjoy end-to-end work: understanding the business rule, modeling the database, writing the API and the UI, and leaving deployment and docs ready so someone else can run it.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- STACK -->
+    <section id="stack" class="section container">
+      <h2 class="section__title"><span class="mono accent">02.</span> Stack</h2>
+      <div class="stack">
+        <div class="stack__group">
+          <h3><span data-l="es">Lenguajes</span><span data-l="en">Languages</span></h3>
+          <ul class="chips"><li>TypeScript</li><li>JavaScript</li><li>Python</li><li>Java</li><li>C#</li><li>SQL</li></ul>
+        </div>
+        <div class="stack__group">
+          <h3>Backend</h3>
+          <ul class="chips"><li>NestJS</li><li>Spring Boot</li><li>FastAPI</li><li>Express</li><li>ASP.NET Core</li><li>Prisma</li><li>JPA / Hibernate</li></ul>
+        </div>
+        <div class="stack__group">
+          <h3>Frontend</h3>
+          <ul class="chips"><li>React</li><li>Angular</li><li>Vue 3</li><li>Vite</li><li>Tailwind CSS</li><li>Ionic</li><li>PWA</li></ul>
+        </div>
+        <div class="stack__group">
+          <h3><span data-l="es">Datos</span><span data-l="en">Data</span></h3>
+          <ul class="chips"><li>PostgreSQL</li><li>MySQL</li><li>Redis</li><li>SQLite</li><li>pandas</li><li>TensorFlow / Keras</li><li>OpenCV</li><li>scikit-learn</li></ul>
+        </div>
+        <div class="stack__group">
+          <h3>DevOps &amp; Cloud</h3>
+          <ul class="chips"><li>Docker</li><li>Docker Compose</li><li>Nginx</li><li>Terraform</li><li>AWS (Lambda, SAM, CDK)</li><li>Git / GitHub</li></ul>
+        </div>
+        <div class="stack__group">
+          <h3><span data-l="es">Automatización</span><span data-l="en">Automation</span></h3>
+          <ul class="chips"><li>n8n</li><li>Playwright</li><li>PyInstaller</li><li>WhatsApp API</li><li>Telegram Bots</li><li>Claude Code</li></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCIA -->
+    <section id="experiencia" class="section container">
+      <h2 class="section__title"><span class="mono accent">03.</span> <span data-l="es">Experiencia</span><span data-l="en">Experience</span></h2>
+      <ol class="timeline">
+        <li class="timeline__item">
+          <div class="timeline__head">
+            <h3><span data-l="es">Desarrollador Sénior</span><span data-l="en">Senior Developer</span> · Software Colombia</h3>
+            <span class="mono muted"><span data-l="es">jun. 2026 — actualidad</span><span data-l="en">Jun 2026 — present</span></span>
+          </div>
+          <ul data-l="es">
+            <li>Desarrollo full-stack de producto web: backend, frontend y base de datos.</li>
+          </ul>
+          <ul data-l="en">
+            <li>Full-stack product development: backend, frontend and database.</li>
+          </ul>
+        </li>
+        <li class="timeline__item">
+          <div class="timeline__head">
+            <h3><span data-l="es">Desarrollador de Software Sénior</span><span data-l="en">Senior Software Developer</span> · Pollo Olímpico</h3>
+            <span class="mono muted"><span data-l="es">ago. 2025 — jun. 2026</span><span data-l="en">Aug 2025 — Jun 2026</span></span>
+          </div>
+          <ul data-l="es">
+            <li>Atención y corrección de incidentes en producción en una empresa de alimentos, donde el software sostiene la operación diaria.</li>
+            <li>Bot de soporte por WhatsApp integrado con la mesa de ayuda GLPI, con base de conocimiento y flujos en n8n.</li>
+          </ul>
+          <ul data-l="en">
+            <li>Handled and fixed production incidents at a food company where software keeps daily operations running.</li>
+            <li>WhatsApp support bot connected to the GLPI help desk, with a knowledge base and n8n workflows.</li>
+          </ul>
+        </li>
+        <li class="timeline__item">
+          <div class="timeline__head">
+            <h3><span data-l="es">Desarrollador de Software</span><span data-l="en">Software Developer</span> · <a href="https://nitolo.com/" target="_blank" rel="noopener">NITOLO</a></h3>
+            <span class="mono muted"><span data-l="es">mar. 2022 — feb. 2025</span><span data-l="en">Mar 2022 — Feb 2025</span></span>
+          </div>
+          <ul data-l="es">
+            <li>Desarrollo de software a la medida y mantenimiento de sistemas existentes.</li>
+            <li>Actualización tecnológica de aplicativos y cambios en la lógica de negocio junto a las áreas operativas.</li>
+          </ul>
+          <ul data-l="en">
+            <li>Custom software development and maintenance of existing systems.</li>
+            <li>Technology upgrades and business-logic changes delivered with operations teams.</li>
+          </ul>
+        </li>
+        <li class="timeline__item">
+          <div class="timeline__head">
+            <h3><span data-l="es">Desarrollador independiente</span><span data-l="en">Freelance developer</span></h3>
+            <span class="mono muted">2025 — <span data-l="es">actualidad</span><span data-l="en">present</span></span>
+          </div>
+          <ul data-l="es">
+            <li>Diseño, desarrollo y despliegue de sistemas POS marca blanca para comercios minoristas (en producción desde sept. 2026).</li>
+            <li>Automatización de procesos a la medida en Python.</li>
+            <li>Herramientas de escritorio para conciliación de pagos.</li>
+          </ul>
+          <ul data-l="en">
+            <li>Designed, built and deployed white-label POS systems for retail stores (in production since Sep 2026).</li>
+            <li>Custom process automation in Python.</li>
+            <li>Desktop tools for payment reconciliation.</li>
+          </ul>
+        </li>
+      </ol>
+    </section>
+
+    <!-- PROYECTOS DESTACADOS -->
+    <section id="proyectos" class="section container">
+      <h2 class="section__title"><span class="mono accent">04.</span> <span data-l="es">Proyectos destacados</span><span data-l="en">Featured work</span></h2>
+      <p class="section__note muted">
+        <span data-l="es">Proyectos para clientes: el código es privado, aquí está lo que hacen y cómo están construidos.</span>
+        <span data-l="en">Client work: the code is private, so here's what it does and how it's built.</span>
+      </p>
+      <div class="cards">
+        <article class="card card--wide">
+          <div class="card__top"><span class="badge badge--live"><span data-l="es">En producción</span><span data-l="en">In production</span></span></div>
+          <h3><span data-l="es">Sistema POS para licorera</span><span data-l="en">Liquor store POS system</span></h3>
+          <p data-l="es">POS on-premise marca blanca: inventario con variantes y código de barras por cámara, venta al detal y por mayor, <strong>multiventa</strong> simultánea en una sola pantalla, turnos y arqueo de caja, promociones, combos, facturación electrónica opcional, tickets editables, alertas por Telegram y correo, y una <strong>PWA</strong> para vender desde el celular en horas pico. Multi-tienda y roles/permisos editables como datos.</p>
+          <p data-l="en">White-label on-premise POS: inventory with variants and camera barcode scanning, retail and wholesale pricing, several <strong>concurrent sales</strong> on one screen, cash shifts and reconciliation, promotions, bundles, optional e-invoicing, editable receipts, Telegram/email alerts and a <strong>PWA</strong> for selling from phones at peak hours. Multi-store with data-driven roles and permissions.</p>
+          <ul class="chips chips--sm"><li>NestJS</li><li>Prisma</li><li>PostgreSQL</li><li>React</li><li>Vite</li><li>PWA</li><li>Docker</li><li>Nginx</li></ul>
+        </article>
+        <article class="card">
+          <h3><span data-l="es">POS para pañalera</span><span data-l="en">Baby-store POS</span></h3>
+          <p data-l="es">Variante del POS para otro comercio: tallas y colores, multi-caja, registro de bebés para fidelización y códigos QR.</p>
+          <p data-l="en">POS variant for another store: sizes and colors, multiple registers, baby registry for loyalty and QR codes.</p>
+          <ul class="chips chips--sm"><li>NestJS</li><li>React</li><li>PostgreSQL</li><li>Docker</li></ul>
+        </article>
+        <article class="card">
+          <h3><span data-l="es">Automatización de procesos</span><span data-l="en">Process automation</span></h3>
+          <p data-l="es">Aplicaciones de escritorio que convierten procesos operativos manuales en flujos automáticos, con reportes en Excel.</p>
+          <p data-l="en">Desktop apps that turn manual operational processes into automated workflows with Excel reporting.</p>
+          <ul class="chips chips--sm"><li>Python</li><li>pandas</li><li>Excel</li><li>PyInstaller</li></ul>
+        </article>
+        <article class="card">
+          <h3><span data-l="es">Bot de soporte por WhatsApp</span><span data-l="en">WhatsApp support bot</span></h3>
+          <p data-l="es">Atención de soporte por WhatsApp conectada a GLPI, con base de conocimiento, flujos en n8n y despliegue con un CLI propio en PowerShell.</p>
+          <p data-l="en">WhatsApp help-desk bot connected to GLPI, with a knowledge base, n8n workflows and a custom PowerShell CLI for deployment.</p>
+          <ul class="chips chips--sm"><li>n8n</li><li>Evolution API</li><li>PostgreSQL</li><li>Redis</li><li>Docker</li></ul>
+        </article>
+        <article class="card">
+          <h3><span data-l="es">Notificador de transferencias</span><span data-l="en">Payment notifier</span></h3>
+          <p data-l="es">Detecta transferencias entrantes por correo, las anuncia por voz offline y las registra en el POS para la conciliación de caja.</p>
+          <p data-l="en">Detects incoming transfers from email, announces them with offline text-to-speech and records them in the POS for reconciliation.</p>
+          <ul class="chips chips--sm"><li>Python</li><li>IMAP</li><li>TTS</li><li>REST</li></ul>
+        </article>
+        <article class="card">
+          <h3><span data-l="es">Visión por computador e IoT</span><span data-l="en">Computer vision &amp; IoT</span></h3>
+          <p data-l="es">Reconocimiento facial con FaceNet, lectura de placas con OCR y captura de sensores con ESP32 enviando datos a un servidor Flask.</p>
+          <p data-l="en">Face recognition with FaceNet, license-plate OCR, and ESP32 sensors streaming readings to a Flask server.</p>
+          <ul class="chips chips--sm"><li>TensorFlow</li><li>OpenCV</li><li>Tesseract</li><li>ESP32</li><li>Flask</li></ul>
+        </article>
+      </div>
+
+      <h3 class="subhead"><span data-l="es">Código abierto en GitHub</span><span data-l="en">Open source on GitHub</span></h3>
+      <div class="cards cards--repos">
+        <a class="card card--link" href="https://github.com/oxgerrero/SoftwareColombia_PT" target="_blank" rel="noopener">
+          <h4>ProjectSpace</h4>
+          <p data-l="es">SaaS de gestión de proyectos multi-workspace con RBAC y arquitectura limpia.</p>
+          <p data-l="en">Multi-workspace project management SaaS with RBAC and clean architecture.</p>
+          <ul class="chips chips--sm"><li>FastAPI</li><li>React</li><li>PostgreSQL</li></ul>
+        </a>
+        <a class="card card--link" href="https://github.com/oxgerrero/Accenture_PT" target="_blank" rel="noopener">
+          <h4>Franquicias API</h4>
+          <p data-l="es">API REST de franquicias, sucursales y productos con pruebas e infraestructura como código.</p>
+          <p data-l="en">REST API for franchises, branches and products with tests and infrastructure as code.</p>
+          <ul class="chips chips--sm"><li>Java 21</li><li>Spring Boot 3</li><li>Terraform</li></ul>
+        </a>
+        <a class="card card--link" href="https://github.com/oxgerrero/ChatBot_PT" target="_blank" rel="noopener">
+          <h4>ChatBot</h4>
+          <p data-l="es">Chatbot con embeddings locales y contexto de conversación en Redis.</p>
+          <p data-l="en">Chatbot with local embeddings and conversation context in Redis.</p>
+          <ul class="chips chips--sm"><li>FastAPI</li><li>Angular</li><li>Redis</li></ul>
+        </a>
+        <a class="card card--link" href="https://github.com/oxgerrero/RedSocial_PT" target="_blank" rel="noopener">
+          <h4><span data-l="es">Red social</span><span data-l="en">Social network</span></h4>
+          <p data-l="es">Red social tipo Instagram con JWT, publicaciones, reacciones, comentarios y reposts.</p>
+          <p data-l="en">Instagram-style social app with JWT, posts, reactions, comments and reposts.</p>
+          <ul class="chips chips--sm"><li>Express</li><li>Prisma</li><li>React 19</li></ul>
+        </a>
+        <a class="card card--link" href="https://github.com/oxgerrero/EstudiantesMaterias_PT" target="_blank" rel="noopener">
+          <h4>Student Registry</h4>
+          <p data-l="es">Registro de estudiantes, materias y profesores con reglas de inscripción.</p>
+          <p data-l="en">Students, subjects and teachers with enrollment business rules.</p>
+          <ul class="chips chips--sm"><li>.NET 7</li><li>Angular 17</li><li>MySQL</li></ul>
+        </a>
+        <a class="card card--link" href="https://github.com/oxgerrero/AlgoritmoGenetico_base" target="_blank" rel="noopener">
+          <h4><span data-l="es">Algoritmos genéticos</span><span data-l="en">Genetic algorithms</span></h4>
+          <p data-l="es">Librería modular de algoritmos genéticos: selección, cruce, mutación y elitismo.</p>
+          <p data-l="en">Modular genetic-algorithm library: selection, crossover, mutation and elitism.</p>
+          <ul class="chips chips--sm"><li>Python</li><li><span data-l="es">Optimización</span><span data-l="en">Optimization</span></li></ul>
+        </a>
+      </div>
+      <p class="more"><a href="https://github.com/oxgerrero?tab=repositories" target="_blank" rel="noopener"><span data-l="es">Ver todos los repositorios →</span><span data-l="en">See all repositories →</span></a></p>
+    </section>
+
+    <!-- EDUCACIÓN -->
+    <section id="educacion" class="section container">
+      <h2 class="section__title"><span class="mono accent">05.</span> <span data-l="es">Educación</span><span data-l="en">Education</span></h2>
+      <ol class="edu">
+        <li>
+          <span class="mono muted">2025 — 2026</span>
+          <div>
+            <h3><span data-l="es">Especialización en Ciencia y Analítica de Datos</span><span data-l="en">Specialization in Data Science &amp; Analytics</span></h3>
+            <p class="muted">Universidad de Cundinamarca</p>
+          </div>
+        </li>
+        <li>
+          <span class="mono muted">2020 — 2025</span>
+          <div>
+            <h3><span data-l="es">Ingeniería de Sistemas y Computación</span><span data-l="en">B.Sc. Systems and Computer Engineering</span></h3>
+            <p class="muted">Universidad de Cundinamarca</p>
+          </div>
+        </li>
+        <li>
+          <span class="mono muted">2022</span>
+          <div>
+            <h3>Misión TIC 2022</h3>
+            <p class="muted">MinTIC · UIS</p>
+          </div>
+        </li>
+        <li>
+          <span class="mono muted">2020</span>
+          <div>
+            <h3><span data-l="es">Programación Java y PHP</span><span data-l="en">Java &amp; PHP Programming</span></h3>
+            <p class="muted">Politécnico de Colombia</p>
+          </div>
+        </li>
+      </ol>
+      <div class="langs">
+        <h3><span data-l="es">Idiomas</span><span data-l="en">Languages</span></h3>
+        <p><span data-l="es">Español (nativo) · Inglés (B1)</span><span data-l="en">Spanish (native) · English (B1)</span></p>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="section container contact">
+      <h2 class="section__title"><span class="mono accent">06.</span> <span data-l="es">Hablemos</span><span data-l="en">Let's talk</span></h2>
+      <p class="contact__lead">
+        <span data-l="es">¿Tienes un proyecto, una vacante o un proceso que quieras automatizar? Escríbeme.</span>
+        <span data-l="en">Have a project, a role or a process you'd like to automate? Drop me a line.</span>
+      </p>
+      <div class="hero__cta">
+        <a class="btn btn--primary" href="mailto:bojacasa@gmail.com">bojacasa@gmail.com</a>
+        <a class="btn" href="https://www.linkedin.com/in/david-gomez-229541155/" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn" href="https://github.com/oxgerrero" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer container mono muted">
+    © <span id="year">2026</span> David Gómez · <span data-l="es">Hecho a mano, sin frameworks.</span><span data-l="en">Handmade, no frameworks.</span>
+  </footer>
+
+  <script>
+    (function () {
+      var root = document.documentElement;
+      function save(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+
+      document.getElementById("lang-toggle").addEventListener("click", function () {
+        root.lang = root.lang === "es" ? "en" : "es";
+        save("lang", root.lang);
+      });
+
+      document.getElementById("theme-toggle").addEventListener("click", function () {
+        var dark = root.dataset.theme
+          ? root.dataset.theme === "dark"
+          : window.matchMedia("(prefers-color-scheme: dark)").matches;
+        root.dataset.theme = dark ? "light" : "dark";
+        save("theme", root.dataset.theme);
+      });
+
+      document.getElementById("year").textContent = new Date().getFullYear();
+    })();
+  </script>
+</body>
+</html>
